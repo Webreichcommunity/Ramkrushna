@@ -16,7 +16,7 @@ const MainHeader = () => {
                             {/* <MdLocationOn className="h-6 w-6 text-green-600" /> */}
                         </div>
                         <div className="ml-2 font-bold text-gray-700">
-                            <h2 className="text-lg leading-tight">Ram Krushana <span className="text-green-600">Nursery</span></h2>
+                            <h2 className="text-lg leading-tight">Ramkrishana <span className="text-green-600">Nursery</span></h2>
                             <h4 className="text-xs text-gray-500">Landscape & Garden Developer</h4>
                             
                         </div>
