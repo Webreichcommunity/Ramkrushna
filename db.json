@@ -46,7 +46,7 @@
       "discountPrice": 70,
       "rating": 4.6,
       "tag": "Recommended",
-      "image": "https://images.pexels.com/photos/450380/pexels-photo-450380.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/2069425/pexels-photo-2069425.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "5",
@@ -58,7 +58,7 @@
       "discountPrice": 180,
       "rating": 4.8,
       "tag": "Bestseller",
-      "image": "https://images.pexels.com/photos/3828908/pexels-photo-3828908.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/2123482/pexels-photo-2123482.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "6",
@@ -82,7 +82,7 @@
       "discountPrice": 40,
       "rating": 4.7,
       "tag": "Essential",
-      "image": "https://images.pexels.com/photos/5450623/pexels-photo-5450623.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/10606556/pexels-photo-10606556.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "8",
@@ -94,7 +94,7 @@
       "discountPrice": 280,
       "rating": 4.9,
       "tag": "Bestseller",
-      "image": "https://images.pexels.com/photos/6156493/pexels-photo-6156493.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/3698376/pexels-photo-3698376.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "9",
@@ -106,7 +106,7 @@
       "discountPrice": 150,
       "rating": 4.7,
       "tag": "Popular",
-      "image": "https://images.pexels.com/photos/1455106/pexels-photo-1455106.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/207518/pexels-photo-207518.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "10",
@@ -118,19 +118,19 @@
       "discountPrice": 100,
       "rating": 4.8,
       "tag": "Essential",
-      "image": "https://images.pexels.com/photos/2189271/pexels-photo-2189271.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/2613947/pexels-photo-2613947.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "11",
       "name": "Rose Plant",
-      "category": "Flower Plants",
+      "category": "Flowering Plants",
       "subCategory": "Fragrant",
       "description": "Beautiful and fragrant roses, ideal for gifting.",
       "price": 250,
       "discountPrice": 230,
       "rating": 4.9,
       "tag": "Favorite",
-      "image": "https://images.pexels.com/photos/163891/pexels-photo-163891.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/30013200/pexels-photo-30013200/free-photo-of-close-up-of-a-withered-dark-red-rose.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "12",
@@ -142,7 +142,7 @@
       "discountPrice": 130,
       "rating": 4.6,
       "tag": "Popular",
-      "image": "https://images.pexels.com/photos/1035899/pexels-photo-1035899.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/1028223/pexels-photo-1028223.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "13",
@@ -154,19 +154,19 @@
       "discountPrice": 90,
       "rating": 4.7,
       "tag": "Trending",
-      "image": "https://images.pexels.com/photos/36753/cactus-desert-cactus-plant.jpg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/7159917/pexels-photo-7159917.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "14",
       "name": "Chrysanthemum",
-      "category": "Flower Plants",
+      "category": "Flowering Plants",
       "subCategory": "Colorful",
       "description": "Bright and vibrant blooms, perfect for gardens.",
       "price": 180,
       "discountPrice": 160,
       "rating": 4.8,
       "tag": "Bestseller",
-      "image": "https://images.pexels.com/photos/57391/pexels-photo-57391.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/4041420/pexels-photo-4041420.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "15",
@@ -178,7 +178,7 @@
       "discountPrice": 450,
       "rating": 4.9,
       "tag": "Exclusive",
-      "image": "https://images.pexels.com/photos/39517/orange-tree-fruits-oranges-39517.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/30117302/pexels-photo-30117302/free-photo-of-vibrant-orange-tree-against-blue-sky.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "16",
@@ -190,37 +190,37 @@
       "discountPrice": 650,
       "rating": 4.8,
       "tag": "Trending",
-      "image": "https://images.pexels.com/photos/1350989/pexels-photo-1350989.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/8365220/pexels-photo-8365220.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     
     {
       "id": "17",
       "name": "Mint",
-      "category": "Herbs",
+      "category": "Herb",
       "subCategory": "Medicinal",
       "description": "Aromatic and refreshing, great for beverages.",
       "price": 40,
       "discountPrice": 35,
       "rating": 4.7,
       "tag": "Essential",
-      "image": "https://images.pexels.com/photos/1207005/pexels-photo-1207005.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/4503751/pexels-photo-4503751.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "18",
       "name": "Petunia",
-      "category": "Flower Plants",
+      "category": "Flowering Plants",
       "subCategory": "Colorful",
       "description": "Bright and cheerful flowers, ideal for borders.",
       "price": 200,
       "discountPrice": 180,
       "rating": 4.6,
       "tag": "Popular",
-      "image": "https://images.pexels.com/photos/1679643/pexels-photo-1679643.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/707548/pexels-photo-707548.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "19",
       "name": "Basil",
-      "category": "Herbs",
+      "category": "Herb",
       "subCategory": "Culinary",
       "description": "Perfect for cooking and adds a fresh aroma.",
       "price": 30,
@@ -267,7 +267,7 @@
       "rating": 4.5,
       "reviews": 698,
       "tag": "Best Seller",
-      "image": "https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg"
+      "image": "https://nurserylive.com/cdn/shop/products/nurserylive-damascus-rose-scented-rose-any-color-plant_600x600.jpg?v=1634217615"
     },
     {
       "id": "23",
@@ -280,7 +280,7 @@
       "rating": 4.6,
       "reviews": 710,
       "tag": "Popular",
-      "image": "https://images.unsplash.com/photo-1567748157439-651aca2ff064"
+      "image": "https://images.pexels.com/photos/10770150/pexels-photo-10770150.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "24",
@@ -293,7 +293,7 @@
       "rating": 4.3,
       "reviews": 166,
       "tag": "Herb",
-      "image": "https://images.pexels.com/photos/4239146/pexels-photo-4239146.jpeg"
+      "image": "https://images.pexels.com/photos/135168/pexels-photo-135168.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "25",
@@ -306,7 +306,7 @@
       "rating": 4.4,
       "reviews": 550,
       "tag": "Climber",
-      "image": "https://images.pexels.com/photos/6207369/pexels-photo-6207369.jpeg"
+      "image": "https://images.pexels.com/photos/13399299/pexels-photo-13399299.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "26",
@@ -332,7 +332,7 @@
       "rating": 4.7,
       "reviews": 638,
       "tag": "Exotic",
-      "image": "https://images.unsplash.com/photo-1627156349725-0d8247228b08"
+      "image": "https://images.pexels.com/photos/30127959/pexels-photo-30127959/free-photo-of-close-up-of-a-vibrant-purple-bearded-iris-in-bloom.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "28",
@@ -345,7 +345,7 @@
       "rating": 4.4,
       "reviews": 183,
       "tag": "Premium",
-      "image": "https://images.pexels.com/photos/5766288/pexels-photo-5766288.jpeg"
+      "image": "https://images.pexels.com/photos/788193/pexels-photo-788193.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "29",
@@ -358,7 +358,7 @@
       "rating": 4.5,
       "reviews": 363,
       "tag": "Medicinal",
-      "image": "https://images.pexels.com/photos/6930493/pexels-photo-6930493.jpeg"
+      "image": "https://images.pexels.com/photos/7419560/pexels-photo-7419560.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "30",
@@ -384,36 +384,36 @@
       "rating": 4.4,
       "reviews": 181,
       "tag": "Exotic",
-      "image": "https://images.pexels.com/photos/12462781/pexels-photo-12462781.jpeg"
+      "image": "https://images.pexels.com/photos/30122293/pexels-photo-30122293/free-photo-of-beautiful-pink-adenium-flower-in-bloom.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
       "id": "32",
       "name": "Krishna Tulsi Plant, Holy Basil, Ocimum tenuiflorum (Black)",
-      "category": "Herbal Plant",
+      "category": "Herb",
       "subCategory": "Culinary",
       "description": "Sacred herb with numerous health benefits.",
       "price": 294,
       "discountPrice": 259,
       "rating": 4.7,
       "tag": "Popular",
-      "image": "https://images.pexels.com/photos/3736718/pexels-photo-3736718.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/5403314/pexels-photo-5403314.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "33",
       "name": "Piper Betel, Maghai Paan",
-      "category": "Herbal Plant",
+      "category": "Herb",
       "subCategory": "Medicinal",
       "description": "Famous for its aromatic and therapeutic leaves.",
       "price": 305,
       "discountPrice": 259,
       "rating": 4.6,
       "tag": "Recommended",
-      "image": "https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/15378536/pexels-photo-15378536/free-photo-of-green-leaves-in-brown-woven-basket.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "34",
       "name": "Lemon Grass",
-      "category": "Herbal Plant",
+      "category": "Herb",
       "subCategory": "Aromatic",
       "description": "Perfect for teas and culinary use.",
       "price": 298,
@@ -425,85 +425,276 @@
     {
       "id": "35",
       "name": "Common Mint Plant, Pudina",
-      "category": "Herbal Plant",
+      "category": "Herb",
       "subCategory": "Culinary",
       "description": "Ideal for refreshing drinks and garnishes.",
       "price": 294,
       "discountPrice": 259,
       "rating": 4.5,
       "tag": "Top Pick",
-      "image": "https://images.pexels.com/photos/744156/pexels-photo-744156.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/105028/pexels-photo-105028.jpeg"
     },
     {
       "id": "36",
       "name": "Curry Leaves, Kadi Patta, Murraya koenigii, Meetha Neem",
-      "category": "Herbal Plant",
+      "category": "Herb",
       "subCategory": "Culinary",
       "description": "Essential herb for Indian cuisine.",
       "price": 408,
       "discountPrice": 359,
       "rating": 4.9,
       "tag": "Best Seller",
-      "image": "https://nurserylive.com/cdn/shop/products/nurserylive-g-curry-leaves-kadi-patta-murraya-koenigii-meetha-neem-plant_600x600.jpg?v=1634218014"
+      "image": "https://images.pexels.com/photos/28511113/pexels-photo-28511113/free-photo-of-close-up-of-neem-tree-leaves-in-natural-ambiance.jpeg?auto=compress&cs=tinysrgb&w=600"
     },{
       "id": "37",
       "name": "Origanum Majorana, Marjoram, Marwa",
-      "category": "Herbal Plant",
+      "category": "Herb",
       "subCategory": "Medicinal",
       "description": "Aromatic herb with multiple culinary uses.",
       "price": 374,
       "discountPrice": 299,
       "rating": 4.6,
       "tag": "Recommended",
-      "image": "https://images.pexels.com/photos/628776/pexels-photo-628776.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/20374946/pexels-photo-20374946/free-photo-of-top-view-of-green-plants.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "38",
       "name": "Mexican Mint, Patharchur, Ajwain Leaves",
-      "category": "Herbal Plant",
+      "category": "Herb",
       "subCategory": "Aromatic",
       "description": "Known for its strong aroma and medicinal properties.",
       "price": 324,
       "discountPrice": 259,
       "rating": 4.7,
       "tag": "Popular",
-      "image": "https://images.pexels.com/photos/159152/pexels-photo-159152.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/2339223/pexels-photo-2339223.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
       "id": "39",
       "name": "Top 4 Plants For Healthy Homes",
-      "category": "Indoor Plant",
+      "category": "Indoor Plants",
       "subCategory": "Air Purifying",
       "description": "A set of plants perfect for improving indoor air quality.",
       "price": 1314,
       "discountPrice": 1159,
       "rating": 4.8,
       "tag": "Best Value",
-      "image": "https://images.pexels.com/photos/190643/pexels-photo-190643.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/14828042/pexels-photo-14828042.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "40",
       "name": "All Spice",
-      "category": "Herbal Plant",
+      "category": "Herb",
       "subCategory": "Culinary",
       "description": "A versatile plant with aromatic leaves and berries.",
       "price": 705,
       "discountPrice": 599,
       "rating": 4.5,
       "tag": "Trending",
-      "image": "https://images.pexels.com/photos/3535370/pexels-photo-3535370.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/3338495/pexels-photo-3338495.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "41",
       "name": "Cinnamon Bark, Dal Chini",
-      "category": "Herbal Plant",
+      "category": "Herb",
       "subCategory": "Medicinal",
       "description": "Highly valued for its culinary and health benefits.",
       "price": 553,
       "discountPrice": 459,
       "rating": 4.6,
       "tag": "Top Pick",
-      "image": "https://images.pexels.com/photos/405154/pexels-photo-405154.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/5060299/pexels-photo-5060299.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "42",
+      "name": "Cactus",
+      "category": "Succulents",
+      "subCategory": "Decorative",
+      "description": "Unique and low-water requirement plant.",
+      "price": 100,
+      "discountPrice": 90,
+      "rating": 4.7,
+      "tag": "Trending",
+      "image": "https://images.pexels.com/photos/7159917/pexels-photo-7159917.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "43",
+      "name": "Aloe Vera",
+      "category": "Succulents",
+      "subCategory": "Medicinal",
+      "description": "Known for its healing and skincare properties.",
+      "price": 400,
+      "discountPrice": 350,
+      "rating": 4.9,
+      "tag": "Essential",
+      "image": "https://images.pexels.com/photos/1022913/pexels-photo-1022913.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "44",
+      "name": "Jade Plant",
+      "category": "Succulents",
+      "subCategory": "Indoor",
+      "description": "A symbol of luck and prosperity.",
+      "price": 600,
+      "discountPrice": 550,
+      "rating": 4.7,
+      "tag": "Trending",
+      "image": "https://images.pexels.com/photos/676660/pexels-photo-676660.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "45",
+      "name": "Snake Plant",
+      "category": "Succulents",
+      "subCategory": "Air Purifying",
+      "description": "An easy-to-maintain plant with air purifying qualities.",
+      "price": 500,
+      "discountPrice": 450,
+      "rating": 4.8,
+      "tag": "Popular",
+      "image": "https://images.pexels.com/photos/1268109/pexels-photo-1268109.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "46",
+      "name": "Zebra Plant",
+      "category": "Succulents",
+      "subCategory": "Miniature",
+      "description": "Compact and striped succulent for any decor.",
+      "price": 300,
+      "discountPrice": 280,
+      "rating": 4.6,
+      "tag": "Recommended",
+      "image": "https://images.pexels.com/photos/4505146/pexels-photo-4505146.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "47",
+      "name": "Burro's Tail",
+      "category": "Succulents",
+      "subCategory": "Hanging",
+      "description": "An ideal hanging succulent with trailing stems.",
+      "price": 450,
+      "discountPrice": 420,
+      "rating": 4.5,
+      "tag": "New Arrival",
+      "image": "https://images.pexels.com/photos/813222/pexels-photo-813222.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "48",
+      "name": "Echeveria",
+      "category": "Succulents",
+      "subCategory": "Rosette",
+      "description": "A beautiful rosette-shaped succulent.",
+      "price": 350,
+      "discountPrice": 320,
+      "rating": 4.7,
+      "tag": "Trending",
+      "image": "https://images.pexels.com/photos/988872/pexels-photo-988872.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "49",
+      "name": "String of Pearls",
+      "category": "Succulents",
+      "subCategory": "Hanging",
+      "description": "Unique hanging succulent with pearl-like leaves.",
+      "price": 500,
+      "discountPrice": 470,
+      "rating": 4.8,
+      "tag": "Bestseller",
+      "image": "https://images.pexels.com/photos/1592017/pexels-photo-1592017.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },{
+      "id": "50",
+      "name": "Bougainvillea",
+      "category": "Outdoor Plants",
+      "subCategory": "Flowering",
+      "description": "A hardy, colorful flowering plant perfect for outdoor spaces.",
+      "price": 250,
+      "discountPrice": 200,
+      "rating": 4.8,
+      "tag": "Bestseller",
+      "image": "https://images.pexels.com/photos/569966/pexels-photo-569966.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "51",
+      "name": "Areca Palm",
+      "category": "Outdoor Plants",
+      "subCategory": "Foliage",
+      "description": "A beautiful, tall palm ideal for gardens or patios.",
+      "price": 900,
+      "discountPrice": 850,
+      "rating": 4.7,
+      "tag": "Popular",
+      "image": "https://images.pexels.com/photos/1056063/pexels-photo-1056063.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "52",
+      "name": "Hibiscus",
+      "category": "Outdoor Plants",
+      "subCategory": "Flowering",
+      "description": "A vibrant flowering plant with large, tropical blooms.",
+      "price": 300,
+      "discountPrice": 280,
+      "rating": 4.6,
+      "tag": "Trending",
+      "image": "https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "53",
+      "name": "Ficus Tree",
+      "category": "Outdoor Plants",
+      "subCategory": "Shade",
+      "description": "A versatile and hardy tree ideal for providing shade.",
+      "price": 1200,
+      "discountPrice": 1150,
+      "rating": 4.7,
+      "tag": "Recommended",
+      "image": "https://images.pexels.com/photos/1149332/pexels-photo-1149332.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "54",
+      "name": "Jasmine",
+      "category": "Outdoor Plants",
+      "subCategory": "Fragrant",
+      "description": "A fragrant flowering plant perfect for gardens.",
+      "price": 350,
+      "discountPrice": 320,
+      "rating": 4.9,
+      "tag": "Essential",
+      "image": "https://images.pexels.com/photos/54104/jasmine-flowers-flowering-plants-flowering-shrub-54104.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "55",
+      "name": "Rose",
+      "category": "Outdoor Plants",
+      "subCategory": "Flowering",
+      "description": "A classic flowering plant with numerous varieties and colors.",
+      "price": 400,
+      "discountPrice": 370,
+      "rating": 4.8,
+      "tag": "Gift Idea",
+      "image": "https://images.pexels.com/photos/102781/pexels-photo-102781.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "56",
+      "name": "Mango Tree",
+      "category": "Outdoor Plants",
+      "subCategory": "Fruit",
+      "description": "A seasonal fruit tree known for its delicious mangoes.",
+      "price": 1500,
+      "discountPrice": 1400,
+      "rating": 4.6,
+      "tag": "Bestseller",
+      "image": "https://images.pexels.com/photos/1459495/pexels-photo-1459495.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "57",
+      "name": "Banana Plant",
+      "category": "Outdoor Plants",
+      "subCategory": "Fruit",
+      "description": "A fast-growing plant known for its edible bananas.",
+      "price": 1200,
+      "discountPrice": 1100,
+      "rating": 4.5,
+      "tag": "Recommended",
+      "image": "https://images.pexels.com/photos/6055002/pexels-photo-6055002.jpeg?auto=compress&cs=tinysrgb&w=600"
     }
   ]
 }
