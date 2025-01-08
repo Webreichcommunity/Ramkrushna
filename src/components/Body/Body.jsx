@@ -1,352 +1,320 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaPlus, FaMinus, FaSearch, FaShoppingCart } from 'react-icons/fa';
+import { FaPlus, FaMinus, FaSearch, FaShoppingCart, FaTimes } from 'react-icons/fa';
 import foodItemsData from '../../../db.json';
 import { useCart } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
 import Alert from '@mui/material/Alert';
 import { Link } from 'react-router-dom';
-import Services from '../Services/Services';
 
+// Plant Detail Modal Component
+const PlantModal = ({ plant, isOpen, onClose, onAddToCart, onRemoveFromCart, quantity }) => {
+  if (!isOpen) return null;
 
+  return (
+    // Modal overlay
+    <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
+      {/* Modal content */}
+      <div className="bg-white rounded-xl w-full max-w-3xl relative overflow-hidden">
+        {/* Close button */}
+        <button 
+          onClick={onClose}
+          className="absolute top-2 right-2 p-2 z-10"
+        >
+          <FaTimes size={24} />
+        </button>
+
+        <div className="flex flex-col md:flex-row">
+          {/* Plant image */}
+          <div className="md:w-1/2">
+            <img 
+              src={plant.image} 
+              alt={plant.name}
+              className="w-full h-[300px] md:h-[500px] object-cover"
+            />
+          </div>
+
+          {/* Plant details */}
+          <div className="md:w-1/2 p-6">
+            <h2 className="text-2xl font-bold mb-2">{plant.name}</h2>
+            
+            {/* Tags */}
+            <div className="flex gap-2 mb-4">
+              {plant.tag && (
+                <span className="bg-green-500 text-white px-2 py-1 rounded-full text-sm">
+                  #{plant.tag}
+                </span>
+              )}
+              <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">
+                {plant.subCategory}
+              </span>
+            </div>
+
+            {/* Description */}
+            <p className="text-gray-600 mb-4">{plant.description}</p>
+
+            {/* Price */}
+            <div className="mb-6">
+              {plant.discountPrice ? (
+                <div className="flex items-center gap-2">
+                  <span className="text-3xl font-bold text-green-600">₹{plant.discountPrice}</span>
+                  <span className="text-xl line-through text-gray-400">₹{plant.price}</span>
+                </div>
+              ) : (
+                <span className="text-3xl font-bold text-green-600">₹{plant.price}</span>
+              )}
+            </div>
+
+            {/* Add to cart buttons */}
+            <div className="flex items-center gap-4">
+              {quantity > 0 ? (
+                <div className="flex items-center gap-4 bg-green-50 p-2 rounded-lg">
+                  <button onClick={() => onRemoveFromCart(plant)}>
+                    <FaMinus size={20} />
+                  </button>
+                  <span className="text-xl font-bold">{quantity}</span>
+                  <button onClick={() => onAddToCart(plant)}>
+                    <FaPlus size={20} />
+                  </button>
+                </div>
+              ) : (
+                <button
+                  onClick={() => onAddToCart(plant)}
+                  className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700"
+                >
+                  Add to Cart
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Main Body Component
 const Body = () => {
+  // States
   const [searchQuery, setSearchQuery] = useState('');
   const [filter, setFilter] = useState('');
   const [showPopup, setShowPopup] = useState(false);
-  const [cartCount, setCartCount] = useState(0);
+  const [selectedPlant, setSelectedPlant] = useState(null);
+  const [currentOfferIndex, setCurrentOfferIndex] = useState(0);
+  
+  // Hooks
   const { addToCart, cartItems, updateItemQuantity, removeItem } = useCart();
   const navigate = useNavigate();
-  const [currentOfferIndex, setCurrentOfferIndex] = useState(0);
 
-  const foodItems = foodItemsData.foodItems || [];
-  const categories = [...new Set(foodItems.map(item => item.category))];
-  const subCategories = [...new Set(foodItems.map(item => item.subCategory))];
+  // Get data
+  const plants = foodItemsData.foodItems || [];
+  const categories = [...new Set(plants.map(item => item.category))];
+  const subCategories = [...new Set(plants.map(item => item.subCategory))];
 
-  // Offer cards
+  // Offer cards data
   const offerCards = [
     {
       title: 'Green Delight Offers!',
-      description: 'Get up to 40% OFF on indoor plants this season!',
+      description: 'Get up to 40% OFF on indoor plants!',
       bg: 'bg-gradient-to-r from-green-500 to-lime-500'
     },
     {
       title: 'Weekend Plant Fest!',
-      description: 'Enjoy 25% OFF on orders above ₹300 on all flowering plants!',
+      description: '25% OFF on orders above ₹300!',
       bg: 'bg-gradient-to-r from-teal-400 to-green-600'
     },
-    {
-      title: 'Garden Starter Kits',
-      description: 'Save 30% on garden combo kits to kickstart your green journey.',
-      bg: 'bg-gradient-to-r from-emerald-500 to-teal-500'
-    },
-    {
-      title: 'Ram Krushana Exclusive!',
-      description: 'Buy 2 Get 1 Free on select saplings this week only.',
-      bg: 'bg-gradient-to-r from-green-600 to-emerald-400'
-    },
-    {
-      title: 'Herbal Happiness!',
-      description: 'Get flat 20% OFF on medicinal and herbal plants.',
-      bg: 'bg-gradient-to-r from-olive-500 to-green-700'
-    }
+    // Add more offers as needed
   ];
 
-
+  // Change offer every 2 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentOfferIndex(prevIndex => (prevIndex + 1) % offerCards.length);
+      setCurrentOfferIndex(prev => (prev + 1) % offerCards.length);
     }, 2000);
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    const totalCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
-    setCartCount(totalCount);
-  }, [cartItems]);
-
-  const handleFilterChange = (category) => {
-    setFilter(category === 'All' ? '' : category);
-  };
-
-  const filteredItems = foodItems.filter(item => {
-    const query = searchQuery.toLowerCase();
-    const matchesSearch =
-      item.name.toLowerCase().includes(query) ||
-      item.category.toLowerCase().includes(query) ||
-      item.subCategory.toLowerCase().includes(query) ||
-      item.price.toString().includes(query);
-
-    const matchesFilter = filter === '' || item.category === filter || item.subCategory === filter || (filter === 'under100' && item.price < 100);
+  // Filter plants based on search and category
+  const filteredPlants = plants.filter(plant => {
+    const matchesSearch = plant.name.toLowerCase().includes(searchQuery) ||
+                         plant.category.toLowerCase().includes(searchQuery) ||
+                         plant.subCategory.toLowerCase().includes(searchQuery);
+    const matchesFilter = !filter || plant.category === filter || plant.subCategory === filter;
     return matchesSearch && matchesFilter;
   });
 
-  const handleAddToCart = (item) => {
-    addToCart(item);
+  // Cart functions
+  const handleAddToCart = (plant) => {
+    addToCart(plant);
     setShowPopup(true);
     setTimeout(() => setShowPopup(false), 1000);
   };
 
-  const handleRemoveFromCart = (item) => {
-    const cartItem = cartItems.find(cartItem => cartItem.id === item.id); // Find the item in the cart
-
-    if (cartItem && cartItem.quantity > 1) {
-      updateItemQuantity(item.id, cartItem.quantity - 1);
-    } else if (cartItem && cartItem.quantity === 1) {
-      removeItem(item.id); // Remove the item from the cart if quantity reaches zero
+  const handleRemoveFromCart = (plant) => {
+    const cartItem = cartItems.find(item => item.id === plant.id);
+    if (cartItem?.quantity > 1) {
+      updateItemQuantity(plant.id, cartItem.quantity - 1);
+    } else {
+      removeItem(plant.id);
     }
   };
 
-
-  const handleSearchChange = (e) => setSearchQuery(e.target.value.toLowerCase());
-  const handleCartClick = () => navigate('/cart');
-
-  const imageLinks = [
-    "https://cdn-icons-png.flaticon.com/128/9922/9922321.png",
-    "https://cdn-icons-png.flaticon.com/128/5533/5533600.png",
-    "https://cdn-icons-png.flaticon.com/128/7865/7865058.png",
-    "https://cdn-icons-png.flaticon.com/128/2303/2303716.png",
-    "https://cdn-icons-png.flaticon.com/128/12630/12630757.png",
-    "https://cdn-icons-png.flaticon.com/128/11504/11504574.png",
-    "https://cdn-icons-png.flaticon.com/128/7096/7096435.png",
-    "https://cdn-icons-png.flaticon.com/128/628/628283.png",
-    "https://cdn-icons-png.flaticon.com/128/2913/2913520.png",
-    "https://cdn-icons-png.flaticon.com/128/2220/2220083.png",
-    "https://cdn-icons-png.flaticon.com/128/5599/5599408.png",
-    "https://cdn-icons-png.flaticon.com/128/5770/5770070.png",
-    "https://cdn-icons-png.flaticon.com/128/3200/3200085.png",
-  ];
-
   return (
-    <div className="relative flex flex-col items-center p-0 bg-gray-50">
-
-      {/* Filter Buttons */}
-      <div className="w-full bg-gray-900/20 bg-opacity-30 backdrop-filter backdrop-blur-lg shadow-lg rounded-lg px-4 py-2 z-20 border border-opacity-30 border-white mb-2">
-        <div className="w-full flex space-x-3 overflow-x-auto no-scrollbar p-2">
-          <motion.button
-            className={`px-4 py-2 whitespace-nowrap rounded-full ${filter === '' ? 'bg-gray-800 text-white shadow-lg' : 'bg-gray-200 text-gray-700'} transition-all transform hover:scale-105 focus:outline-none`}
-            onClick={() => handleFilterChange('All')}
-            whileHover={{ scale: 1.05 }}
-          >
-            <span className="text-sm font-medium">All</span>
-          </motion.button>
-          {categories.map((category, index) => (
-            <motion.button
-              key={index}
-              className={`px-4 py-2 whitespace-nowrap rounded-full ${filter === category ? 'bg-gray-800 text-white shadow-lg' : 'bg-gray-200 text-gray-700'} transition-all transform hover:scale-105 focus:outline-none`}
-              onClick={() => handleFilterChange(category)}
-              whileHover={{ scale: 1.05 }}
-            >
-              <span className="text-sm font-medium">{category}</span>
-            </motion.button>
-          ))}
+    <div className="min-h-screen bg-gray-50 p-4">
+      {/* Search bar */}
+      <div className="max-w-md mx-auto mb-6">
+        <div className="flex items-center bg-white rounded-full shadow-md p-3">
+          <FaSearch className="text-gray-400 ml-3" />
+          <input
+            type="text"
+            placeholder="Search plants..."
+            className="w-full px-4 focus:outline-none"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value.toLowerCase())}
+          />
         </div>
       </div>
 
-      {/* Offer Cards  */}
-      <div className="w-full overflow-x-hidden mb-2 relative h-40">
+      {/* Category filters */}
+      <div className="flex gap-2 overflow-x-auto mb-6 p-2">
+        <button
+          onClick={() => setFilter('')}
+          className={`px-4 py-2 rounded-full ${!filter ? 'bg-green-600 text-white' : 'bg-gray-200'}`}
+        >
+          All
+        </button>
+        {categories.map(category => (
+          <button
+            key={category}
+            onClick={() => setFilter(category)}
+            className={`px-4 py-2 rounded-full ${
+              filter === category ? 'bg-green-600 text-white' : 'bg-gray-200'
+            }`}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+
+      {/* Offers carousel */}
+      <div className="mb-6 h-40 relative overflow-hidden rounded-lg">
         <AnimatePresence>
           {offerCards.map((offer, index) => (
             index === currentOfferIndex && (
               <motion.div
                 key={index}
-                className={`absolute inset-0 flex flex-col items-center justify-center text-white p-4 rounded-lg shadow-lg ${offer.bg}`}
+                className={`absolute inset-0 flex flex-col items-center justify-center text-white p-4 ${offer.bg}`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 1 }}
               >
-                <h2 className="text-3xl font-bold mb-2">{offer.title}</h2>
-                <p className="text-lg">{offer.description}</p>
+                <h2 className="text-2xl font-bold mb-2">{offer.title}</h2>
+                <p>{offer.description}</p>
               </motion.div>
             )
           ))}
         </AnimatePresence>
       </div>
 
+      {/* Plants grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {filteredPlants.map(plant => {
+          const cartItem = cartItems.find(item => item.id === plant.id);
+          const quantity = cartItem?.quantity || 0;
 
-      {/* Categories Filter */}
-      <div
-        className="w-full mb-6 flex overflow-x-auto rounded-lg  backdrop-blur-md m-auto shadow-lg items-center content-center"
-        style={{
-          scrollbarColor: "#22c55e transparent", // Scrollbar color for Firefox
-          scrollbarWidth: "thin", // Set to thin for Firefox
-        }}
-      >
-        {/* Scrollbar styling for Webkit browsers (Chrome, Safari) */}
-        <style jsx>{`
-    ::-webkit-scrollbar {
-      height: 8px;
-    }
-    ::-webkit-scrollbar-thumb {
-      background-color: #22c55e; /* Green scrollbar thumb */
-      border-radius: 20px;
-    }
-    ::-webkit-scrollbar-track {
-      background: transparent;
-    }
-  `}</style>
-
-        <motion.button
-          className={`flex flex-col items-center p-4 rounded-lg bg-white ${filter === '' ? 'bg-green-100' : ''
-            } shadow-lg transition-all mx-2`}
-          onClick={() => handleFilterChange('All')}
-          style={{ minWidth: '100px', minHeight: '150px' }}
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/892/892926.png" // Updated icon for a plant-based theme
-            alt="All Plants"
-            className="h-20 w-20 mb-2"
-          />
-          <span className="text-sm font-medium text-green-700">All Plants</span>
-        </motion.button>
-
-        {[...subCategories, ...categories].map((category, index) => (
-          <motion.button
-            key={index}
-            className={`flex flex-col items-center p-4 rounded-lg bg-white ${filter === category ? 'bg-green-100 text-green-900' : ''
-              } shadow-lg transition-all mx-2`}
-            onClick={() => handleFilterChange(category)}
-            style={{ minWidth: '100px', minHeight: '150px' }}
-          >
-            <img
-              src={imageLinks[index % imageLinks.length]} // Cycle through images based on index
-              alt={category}
-              className="h-20 w-20 mb-2"
-            />
-            <span className="text-sm font-medium text-green-700">{category}</span>
-          </motion.button>
-        ))}
-      </div>
-
-      {/* Services Card  */}
-      {/* <Services /> */}
-
-      {/* Search Bar */}
-      <div className="w-full max-w-md flex items-center bg-white rounded-full shadow-md p-3 mb-2">
-        <FaSearch className="text-gray-400 ml-3" />
-        <input
-          type="text"
-          placeholder="Search by name, category, price, or tag"
-          className="flex-grow focus:outline-none px-4 text-gray-700"
-          value={searchQuery}
-          onChange={handleSearchChange}
-        />
-      </div>
-
-      {/* Food Items Grid */}
-      <motion.div className="w-full max-w-6xl p-5 mb-12 bg-white rounded-lg shadow-lg">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">Top Quality Picks</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {filteredItems.map(item => {
-            const itemInCart = cartItems.find(cartItem => cartItem.id === item.id);
-            const itemQuantity = itemInCart ? itemInCart.quantity : 0;
-
-            return (
-              <div
-                key={item.id}
-                className="relative rounded-lg shadow-lg overflow-hidden group h-96 bg-cover bg-center"
-                style={{ backgroundImage: `url(${item.image})` }}
-              >
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-green-100/5 transition-opacity duration-300"></div>
-
-                {/* Bottom Glass Effect Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gray-900/50 bg-opacity-70 backdrop-blur-md text-white">
-                  <h3 className="text-lg font-semibold mb-1 flex justify-between text-white">
-                    {item.name}
-                  </h3>
-                  <div className="flex justify-between items-center w-full p-2">
-                    {item.tag && (
-                      <p className="bg-green-600 px-2 py-1 text-xs font-semibold text-white rounded-lg inline-block mb-1">
-                        #{item.tag}
-                      </p>
-                    )}
-                    <p
-                      className={`px-2 py-1 text-xs font-semibold bg-white/80 rounded-full ${item.subCategory === 'Veg' ? 'text-green-600' : 'text-green-800'
-                        } ml-auto`}
-                    >
-                      {item.subCategory}
-                    </p>
-                  </div>
-                  <p className="text-sm text-gray-100 mb-2 line-clamp-2">{item.description}</p>
-
-                  {/* Price and Add to Cart Button */}
-                  <div className="flex justify-between items-center">
-                    {/* Discounted Price */}
-                    {item.discountPrice ? (
-                      <div className="flex items-center">
-                        <span className="text-lg font-bold text-green-400">₹{item.discountPrice}</span>
-                        <span className="line-through ml-2 text-gray-500">₹{item.price}</span>
-                      </div>
-                    ) : (
-                      <span className="text-xl font-bold text-green-400">₹{item.price}</span>
-                    )}
-
-                    {/* Add to Cart Buttons */}
-                    <div className="flex items-center">
-                      {itemQuantity > 0 ? (
-                        <>
-                          <button
-                            className="text-white hover:text-red-500 focus:outline-none"
-                            onClick={() => handleRemoveFromCart(item)}
-                          >
-                            <FaMinus />
-                          </button>
-                          <span className="mx-2 text-white">{itemQuantity}</span>
-                          <button
-                            className="text-white hover:text-green-500 focus:outline-none"
-                            onClick={() => handleAddToCart(item)}
-                          >
-                            <FaPlus />
-                          </button>
-                        </>
-                      ) : (
-                        <button
-                          className="px-4 py-1 bg-green-600 text-white rounded-lg hover:bg-green-700 focus:outline-none"
-                          onClick={() => handleAddToCart(item)}
-                        >
-                          Add to Cart
-                        </button>
-                      )}
+          return (
+            <div
+              key={plant.id}
+              className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer"
+              onClick={() => setSelectedPlant(plant)}
+            >
+              <img
+                src={plant.image}
+                alt={plant.name}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="font-bold mb-2">{plant.name}</h3>
+                <div className="flex justify-between items-center">
+                  <span className="font-bold text-green-600">₹{plant.price}</span>
+                  {quantity > 0 ? (
+                    <div className="flex items-center gap-2">
+                      <button 
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleRemoveFromCart(plant);
+                        }}
+                        className="p-1"
+                      >
+                        <FaMinus />
+                      </button>
+                      <span>{quantity}</span>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleAddToCart(plant);
+                        }}
+                        className="p-1"
+                      >
+                        <FaPlus />
+                      </button>
                     </div>
-                  </div>
+                  ) : (
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleAddToCart(plant);
+                      }}
+                      className="bg-green-600 text-white px-4 py-2 rounded-lg"
+                    >
+                      Add to Cart
+                    </button>
+                  )}
                 </div>
               </div>
-            );
-          })}
-        </div>
-      </motion.div>
+            </div>
+          );
+        })}
+      </div>
 
-      {/* Cart Notification */}
+      {/* Plant detail modal */}
+      {selectedPlant && (
+        <PlantModal
+          plant={selectedPlant}
+          isOpen={!!selectedPlant}
+          onClose={() => setSelectedPlant(null)}
+          onAddToCart={handleAddToCart}
+          onRemoveFromCart={handleRemoveFromCart}
+          quantity={cartItems.find(item => item.id === selectedPlant.id)?.quantity || 0}
+        />
+      )}
+
+      {/* Added to cart popup */}
       <AnimatePresence>
         {showPopup && (
           <motion.div
-            className="fixed top-15 right-5"
-            initial={{ opacity: 0, translateY: 20 }}
-            animate={{ opacity: 1, translateY: 0 }}
-            exit={{ opacity: 0, translateY: 20 }}
+            className="fixed top-4 right-4"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
           >
-            <Alert severity="success">Item added to cart!</Alert>
+            <Alert severity="success">Added to cart!</Alert>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Floating Cart Button */}
-      <div
-        className="fixed bottom-6 right-6 p-3 bg-gradient-to-r from-green-500 to-green-400 text-white rounded-full shadow-lg cursor-pointer hover:scale-105 transition-all"
-        onClick={handleCartClick}
+      {/* Cart button */}
+      <button
+        onClick={() => navigate('/cart')}
+        className="fixed bottom-6 right-6 bg-green-600 text-white p-4 rounded-full shadow-lg"
       >
-        <div className='flex items-center'>
-          <p className='text-white font-semibold text-lg px-2'>view cart</p>
-          <FaShoppingCart size={24} />
-        </div>
-
-        {cartCount > 0 && (
-          <span className="absolute top-0 right-0 w-5 h-5 rounded-full bg-black flex items-center justify-center text-xs font-bold text-white">
-            {cartCount}
+        <FaShoppingCart size={24} />
+        {cartItems.length > 0 && (
+          <span className="absolute -top-2 -right-2 bg-red-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm">
+            {cartItems.reduce((sum, item) => sum + item.quantity, 0)}
           </span>
         )}
-      </div>
+      </button>
     </div>
   );
 };
