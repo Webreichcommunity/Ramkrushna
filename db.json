@@ -507,7 +507,7 @@
     },
     {
       "id": "42",
-      "name": "Cactus",
+      "name": "Echeveria",
       "category": "Succulents",
       "subCategory": "Decorative",
       "description": "Unique and low-water requirement plant.",
@@ -515,46 +515,11 @@
       "discountPrice": 90,
       "rating": 4.7,
       "tag": "Trending",
-      "image": "https://images.pexels.com/photos/7159917/pexels-photo-7159917.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/1011302/pexels-photo-1011302.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
+   
     {
       "id": "43",
-      "name": "Aloe Vera",
-      "category": "Succulents",
-      "subCategory": "Medicinal",
-      "description": "Known for its healing and skincare properties.",
-      "price": 400,
-      "discountPrice": 350,
-      "rating": 4.9,
-      "tag": "Essential",
-      "image": "https://images.pexels.com/photos/1022913/pexels-photo-1022913.jpeg?auto=compress&cs=tinysrgb&w=600"
-    },
-    {
-      "id": "44",
-      "name": "Jade Plant",
-      "category": "Succulents",
-      "subCategory": "Indoor",
-      "description": "A symbol of luck and prosperity.",
-      "price": 600,
-      "discountPrice": 550,
-      "rating": 4.7,
-      "tag": "Trending",
-      "image": "https://images.pexels.com/photos/676660/pexels-photo-676660.jpeg?auto=compress&cs=tinysrgb&w=600"
-    },
-    {
-      "id": "45",
-      "name": "Snake Plant",
-      "category": "Succulents",
-      "subCategory": "Air Purifying",
-      "description": "An easy-to-maintain plant with air purifying qualities.",
-      "price": 500,
-      "discountPrice": 450,
-      "rating": 4.8,
-      "tag": "Popular",
-      "image": "https://images.pexels.com/photos/1268109/pexels-photo-1268109.jpeg?auto=compress&cs=tinysrgb&w=600"
-    },
-    {
-      "id": "46",
       "name": "Zebra Plant",
       "category": "Succulents",
       "subCategory": "Miniature",
@@ -563,7 +528,31 @@
       "discountPrice": 280,
       "rating": 4.6,
       "tag": "Recommended",
-      "image": "https://images.pexels.com/photos/4505146/pexels-photo-4505146.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/2516650/pexels-photo-2516650.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "44",
+      "name": "Neem Tree",
+      "category": "Outdoor Plants",
+      "subCategory": "Big Trees",
+      "description": "A large, fast-growing tree with medicinal properties and excellent shade.",
+      "price": 2000,
+      "discountPrice": 1800,
+      "rating": 4.9,
+      "tag": "Essential",
+      "image": "https://images.pexels.com/photos/19181914/pexels-photo-19181914/free-photo-of-paso-robles-usa-wine-country.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "45",
+      "name": "Ashoka Tree",
+      "category": "Outdoor Plants",
+      "subCategory": "Big Trees",
+      "description": "A tall, ornamental tree known for its lush foliage and elegant structure.",
+      "price": 2200,
+      "discountPrice": 2000,
+      "rating": 4.8,
+      "tag": "Popular",
+      "image": "https://www.padmamnursery.com/cdn/shop/files/Ashoka-Tree_b10f777d-7a65-4f4d-888b-c81558034d41.jpg?v=1728317190"
     },
     {
       "id": "47",
@@ -575,20 +564,21 @@
       "discountPrice": 420,
       "rating": 4.5,
       "tag": "New Arrival",
-      "image": "https://images.pexels.com/photos/813222/pexels-photo-813222.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/17559896/pexels-photo-17559896/free-photo-of-green-plant-in-flowerpot.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "48",
-      "name": "Echeveria",
+      "name": "Sedum",
       "category": "Succulents",
-      "subCategory": "Rosette",
-      "description": "A beautiful rosette-shaped succulent.",
-      "price": 350,
-      "discountPrice": 320,
-      "rating": 4.7,
-      "tag": "Trending",
-      "image": "https://images.pexels.com/photos/988872/pexels-photo-988872.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "subCategory": "Trailing",
+      "description": "A versatile trailing succulent perfect for hanging pots or ground cover.",
+      "price": 300,
+      "discountPrice": 270,
+      "rating": 4.8,
+      "tag": "Popular",
+      "image": "https://images.pexels.com/photos/866042/pexels-photo-866042.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
+    
     {
       "id": "49",
       "name": "String of Pearls",
@@ -599,7 +589,7 @@
       "discountPrice": 470,
       "rating": 4.8,
       "tag": "Bestseller",
-      "image": "https://images.pexels.com/photos/1592017/pexels-photo-1592017.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/20601177/pexels-photo-20601177/free-photo-of-green-buds-hanging-on-branches.jpeg?auto=compress&cs=tinysrgb&w=600"
     },{
       "id": "50",
       "name": "Bougainvillea",
@@ -610,7 +600,7 @@
       "discountPrice": 200,
       "rating": 4.8,
       "tag": "Bestseller",
-      "image": "https://images.pexels.com/photos/569966/pexels-photo-569966.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/1029021/pexels-photo-1029021.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "51",
@@ -622,7 +612,7 @@
       "discountPrice": 850,
       "rating": 4.7,
       "tag": "Popular",
-      "image": "https://images.pexels.com/photos/1056063/pexels-photo-1056063.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/3126442/pexels-photo-3126442.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "52",
@@ -634,7 +624,7 @@
       "discountPrice": 280,
       "rating": 4.6,
       "tag": "Trending",
-      "image": "https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/244796/pexels-photo-244796.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "53",
@@ -646,34 +636,11 @@
       "discountPrice": 1150,
       "rating": 4.7,
       "tag": "Recommended",
-      "image": "https://images.pexels.com/photos/1149332/pexels-photo-1149332.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/13796702/pexels-photo-13796702.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
+   
     {
       "id": "54",
-      "name": "Jasmine",
-      "category": "Outdoor Plants",
-      "subCategory": "Fragrant",
-      "description": "A fragrant flowering plant perfect for gardens.",
-      "price": 350,
-      "discountPrice": 320,
-      "rating": 4.9,
-      "tag": "Essential",
-      "image": "https://images.pexels.com/photos/54104/jasmine-flowers-flowering-plants-flowering-shrub-54104.jpeg?auto=compress&cs=tinysrgb&w=600"
-    },
-    {
-      "id": "55",
-      "name": "Rose",
-      "category": "Outdoor Plants",
-      "subCategory": "Flowering",
-      "description": "A classic flowering plant with numerous varieties and colors.",
-      "price": 400,
-      "discountPrice": 370,
-      "rating": 4.8,
-      "tag": "Gift Idea",
-      "image": "https://images.pexels.com/photos/102781/pexels-photo-102781.jpeg?auto=compress&cs=tinysrgb&w=600"
-    },
-    {
-      "id": "56",
       "name": "Mango Tree",
       "category": "Outdoor Plants",
       "subCategory": "Fruit",
@@ -682,10 +649,10 @@
       "discountPrice": 1400,
       "rating": 4.6,
       "tag": "Bestseller",
-      "image": "https://images.pexels.com/photos/1459495/pexels-photo-1459495.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/19087708/pexels-photo-19087708/free-photo-of-fruits-growing-on-tree-branches.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
-      "id": "57",
+      "id": "55",
       "name": "Banana Plant",
       "category": "Outdoor Plants",
       "subCategory": "Fruit",
@@ -694,8 +661,19 @@
       "discountPrice": 1100,
       "rating": 4.5,
       "tag": "Recommended",
-      "image": "https://images.pexels.com/photos/6055002/pexels-photo-6055002.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "image": "https://images.pexels.com/photos/2063892/pexels-photo-2063892.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "",
+      "name": "",
+      "category": "",
+      "subCategory": "",
+      "description": "",
+      "price": "",
+      "quantity": "",
+      "additionalNotes": ""
     }
+    
   ]
 }
 

@@ -7,14 +7,14 @@ const Footer = () => {
     <footer className="bg-green-50 text-green-900 py-10 px-4 border-t border-green-200">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <div className="mb-6 md:mb-0 text-center md:text-left">
-          <h2 className="text-2xl font-bold mb-2">Ramkrushana <span className='text-green-600'>Nursery</span></h2>
+          <h2 className="text-2xl font-bold mb-2">Ramkrishana <span className='text-green-600'>Nursery</span></h2>
           <p className="mb-2">Your trusted source for quality plants and gardening solutions.</p>
-          <p className="mb-1">456 Green Valley, Kaulkhed, Akola</p>
-          <p className="mb-1">Phone: (123) 456-7890</p>
+          <p className="mb-1">Motwani farm near Dream city, Barshitakli Road, Kanheri Sarap</p>
+          <p className="mb-1">Phone: 8975330854</p>
         </div>
         <div className="flex space-x-6 mb-2 md:mb-0">
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/ramkrishnanursery/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-green-900 hover:text-green-600 transition-transform transform hover:scale-125 duration-300"
@@ -22,7 +22,7 @@ const Footer = () => {
             <FaInstagram className="h-7 w-7" />
           </a>
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/RamkrishnaNursery21/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-green-900 hover:text-green-600 transition-transform transform hover:scale-125 duration-300"
@@ -30,7 +30,7 @@ const Footer = () => {
             <FaFacebook className="h-7 w-7" />
           </a>
           <a
-            href="https://wa.me/1234567890"
+            href="https://wa.me/8975330854"
             target="_blank"
             rel="noopener noreferrer"
             className="text-green-900 hover:text-green-600 transition-transform transform hover:scale-125 duration-300"
@@ -38,7 +38,7 @@ const Footer = () => {
             <FaWhatsapp className="h-7 w-7" />
           </a>
           <a
-            href="mailto:info@ramkrushananursery.com"
+            href="mailto:ramkrishananursery21@gmail.com"
             className="text-green-900 hover:text-green-600 transition-transform transform hover:scale-125 duration-300"
           >
             <MailIcon className="h-7 w-7" />
@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="mt-2 text-center text-green-700">
-        <p>&copy; {new Date().getFullYear()} Ramkrushana Nursery. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Ramkrishna Nursery. All rights reserved.</p>
       </div>
       <style jsx>{`
         @keyframes slideUp {
